@@ -17,6 +17,11 @@ public class UserService implements IdentityManagementService {
     private ApiConfiguration apiConfiguration;
 
 
+    /**
+     * Test to ensure the configured Public API key is valid
+     *
+     * @return whether the key is valid
+     */
     public boolean testPublicApiKey() {
         HttpHeaders headers = getRequestHeader(apiConfiguration, false);
         HttpEntity<String> requestEntity = new HttpEntity<>(headers);
@@ -25,13 +30,14 @@ public class UserService implements IdentityManagementService {
         final String api = "api/1/users/_search?email=xteam-test@rapid7.com";
         ResponseEntity<Object> response = restTemplate.exchange(apiConfiguration.getApiHost() + api, HttpMethod.GET, requestEntity, Object.class);
 
-        if (response.getStatusCode().equals(HttpStatus.OK) || response.getStatusCode().equals(HttpStatus.NOT_FOUND)) {
-            return true;
-        }
-
-        return false;
+        return response.getStatusCode().equals(HttpStatus.OK) || response.getStatusCode().equals(HttpStatus.NOT_FOUND);
     }
 
+    /**
+     * Test to ensure the configured Public API key is valid
+     *
+     * @return whether the key is valid
+     */
     public boolean testRBACKey() {
         HttpHeaders headers = getRequestHeader(apiConfiguration, true);
         HttpEntity<String> requestEntity = new HttpEntity<>(headers);
@@ -40,11 +46,7 @@ public class UserService implements IdentityManagementService {
         final String api = "rbac/v1/me/uap";
         ResponseEntity<UAP> response = restTemplate.exchange(apiConfiguration.getApiHost() + api, HttpMethod.GET, requestEntity, UAP.class);
 
-        if (response.getStatusCode().equals(HttpStatus.OK)) {
-            return true;
-        }
-
-        return false;
+        return response.getStatusCode().equals(HttpStatus.OK);
     }
 
     /**

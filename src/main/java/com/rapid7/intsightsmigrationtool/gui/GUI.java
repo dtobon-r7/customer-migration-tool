@@ -120,8 +120,7 @@ public class GUI extends JFrame {
         constraints.gridx = 1;
         constraints.gridy = 4;
         apiKeyTextField.setMaximumSize(new Dimension(10, 10));
-        //TODO Remove values before packaging.
-        apiKeyTextField.setText("d4133673-aec6-42af-98e4-b15fd3bbb38d");
+        apiKeyTextField.setText("");
         apiKeyTextField.setToolTipText("Please enter the API Key");
         pane.add(apiKeyTextField, constraints);
 
@@ -139,8 +138,7 @@ public class GUI extends JFrame {
         constraints.gridx = 1;
         constraints.gridy = 6;
         rbacApiKeyTextField.setMaximumSize(new Dimension(10, 10));
-        //TODO Remove values before packaging.
-        rbacApiKeyTextField.setText("8d120fed-ef88-474e-acc9-3b2665a670bf");
+        rbacApiKeyTextField.setText("");
         rbacApiKeyTextField.setToolTipText("Please enter the API Key");
         pane.add(rbacApiKeyTextField, constraints);
 

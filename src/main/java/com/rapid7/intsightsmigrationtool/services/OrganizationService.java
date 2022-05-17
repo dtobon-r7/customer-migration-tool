@@ -25,10 +25,24 @@ public class OrganizationService implements IdentityManagementService {
     private State state;
 
 
+    /////////////////////////////
+    //     PUBLIC  METHODS     //
+    /////////////////////////////
+
+    /**
+     * Create an OrgProduct record for the organization with the given Identifier using the following API
+     * <a href="https://artifacts.bos.rapid7.com/nexus/content/sites/razor-site/platform-public-api-app/restdocs/api-guide.html#_create_orgproduct_for_organization">Create OrgProduct for Organization</a>
+     *
+     * @param organizationId the organization unique identifier
+     * @param productCode    the product code identifier (e.g. TC)
+     * @param productStatus  the product status description
+     * @return the result of creating a new OrgProduct
+     * @throws RetryableException if the API calls fail more than the maxAttempts
+     */
     @Retryable(value = {RetryableException.class}, maxAttempts = 4, backoff = @Backoff(delay = 15000))
     public Result<OrgProduct> createOrgProductForOrganization(String organizationId, String productCode, String productStatus) throws RetryableException {
 
-        Result<OrgProduct> result = new Result<OrgProduct>();
+        Result<OrgProduct> result = new Result<>();
 
         if (state.hasOrgProductBeenCreated(organizationId)) {
             result.setMessage("Organization: " + organizationId + " had been previously created.");
@@ -66,7 +80,17 @@ public class OrganizationService implements IdentityManagementService {
         return result;
     }
 
-
+    /**
+     * Add a user with the given email to the organization with the given identifier using the following API.
+     * <a href="https://artifacts.bos.rapid7.com/nexus/content/sites/razor-site/platform-public-api-app/restdocs/api-guide.html#_add_user_to_orgproduct">Add User to OrgProduct</a>
+     *
+     * @param organizationId the organization unique identifier
+     * @param productToken   the OrgProduct's token
+     * @param userEmail      The user's email to add to the Organization
+     * @param admin          whether the user is a Platform admin
+     * @return the result of adding the user to the OrgProduct
+     * @throws RetryableException if the API calls fail more than the maxAttempts
+     */
     @Retryable(value = {RetryableException.class}, maxAttempts = 4, backoff = @Backoff(delay = 15000))
     public Result<?> addUserToOrgProduct(String organizationId, String productToken, String userEmail, boolean admin) throws RetryableException {
 
@@ -89,6 +113,10 @@ public class OrganizationService implements IdentityManagementService {
 
         return result;
     }
+
+    /////////////////////////////
+    // PRIVATE HELPER METHODS //
+    /////////////////////////////
 
     private List<OrgProduct> getOrgProductsForOrganization(String organizationId) {
         // Create payload for request

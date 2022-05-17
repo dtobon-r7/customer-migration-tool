@@ -29,6 +29,10 @@ public class IntSightsMigratorService {
     private UserService userService;
     private State state;
 
+    /////////////////////////////
+    //     PUBLIC  METHODS     //
+    /////////////////////////////
+
     /**
      * Performs the migration of the given customers in to the iPIMS system.
      *
@@ -115,6 +119,10 @@ public class IntSightsMigratorService {
         gui.updateOutput("Migration Completed!");
         logger.info("Completed Migration.");
     }
+
+    //////////////////////////////
+    //  PRIVATE HELPER METHODS  //
+    //////////////////////////////
 
     private void outputLine(String accountId, String customerName, boolean customerCreated, String customerId, String organizationName,
                             boolean organizationCreated, String organizationId, String organizationRegion, String productCode,
