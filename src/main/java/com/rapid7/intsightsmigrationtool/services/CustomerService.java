@@ -4,11 +4,9 @@ import com.rapid7.intsightsmigrationtool.parser.UserInput;
 import com.rapid7.intsightsmigrationtool.services.dto.*;
 import com.rapid7.intsightsmigrationtool.services.state.State;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.retry.annotation.Backoff;
 import org.springframework.retry.annotation.Retryable;
@@ -18,22 +16,17 @@ import org.springframework.web.client.RestTemplate;
 import java.util.*;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Component
 public class CustomerService implements IdentityManagementService {
 
-    Logger logger = LoggerFactory.getLogger(CustomerService.class);
+    private static final Logger logger = LoggerFactory.getLogger(CustomerService.class);
 
-    @Autowired
     private RestTemplate restTemplate;
 
-    @Autowired
     private UserService userService;
 
-    @Autowired
     private ApiConfiguration apiConfiguration;
 
-    @Autowired
     private State state;
 
     /////////////////////////////
@@ -165,15 +158,14 @@ public class CustomerService implements IdentityManagementService {
         if (response.getStatusCode().equals(HttpStatus.OK)) {
             result = new Result<>(true, "Successfully added user: " + user.getEmail(), (User) response.getBody());
         } else if (response.getStatusCode().equals(HttpStatus.CONFLICT)) {
-
-            User existingUser = null;
-            UserProfile userProfile = userService.getUserProfile(user.getEmail());
+            User existingUser;
+            UserProfile userProfile = userService.getUserProfile(customerId, user.getEmail());
             if (userProfile != null) {
                 existingUser = new User(userProfile.getUserId(), null, user.getEmail(), "");
+                return new Result<>(true, "An User with email: " + user.getEmail() + " already exists in this Customer...", existingUser);
+            } else {
+                return new Result<>(false, "WARNING: An User Account for: " + user.getEmail() + " already exists but it doesn't belong to this customer. Skipping user...", null);
             }
-
-            result = new Result<>(false, "An User with email: " + user.getEmail() + " already exists. Skipping...", existingUser);
-
         } else {
             result = new Result<>(false, "Unexpected error when adding user: " + user.getEmail(), null);
         }

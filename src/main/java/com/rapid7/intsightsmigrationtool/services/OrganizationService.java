@@ -3,9 +3,7 @@ package com.rapid7.intsightsmigrationtool.services;
 import com.rapid7.intsightsmigrationtool.services.dto.OrgProduct;
 import com.rapid7.intsightsmigrationtool.services.state.State;
 import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
 import org.json.JSONObject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.*;
 import org.springframework.retry.annotation.Backoff;
 import org.springframework.retry.annotation.Retryable;
@@ -17,17 +15,13 @@ import java.util.List;
 import java.util.Optional;
 
 @AllArgsConstructor
-@NoArgsConstructor
 @Component
 public class OrganizationService implements IdentityManagementService {
 
-    @Autowired
     private RestTemplate restTemplate;
 
-    @Autowired
     private ApiConfiguration apiConfiguration;
 
-    @Autowired
     private State state;
 
 
