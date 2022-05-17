@@ -1,0 +1,36 @@
+2022-05-17 15:14:05,058 INFO org.springframework.boot.StartupInfoLogger [main] Starting IntsightsMigrationToolApplication using Java 17.0.2 on RMT-MBP-11247 with PID 63183 (/Users/dtobon/git/intsights-migration-tool/target/classes started by dtobon in /Users/dtobon/git/intsights-migration-tool)
+2022-05-17 15:14:05,060 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-05-17 15:14:06,368 INFO org.springframework.boot.StartupInfoLogger [main] Started IntsightsMigrationToolApplication in 1.466 seconds (JVM running for 1.836)
+2022-05-17 15:15:12,482 INFO org.springframework.boot.StartupInfoLogger [main] Starting IntsightsMigrationToolApplication using Java 17.0.2 on RMT-MBP-11247 with PID 63206 (/Users/dtobon/git/intsights-migration-tool/target/classes started by dtobon in /Users/dtobon/git/intsights-migration-tool)
+2022-05-17 15:15:12,483 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-05-17 15:15:13,776 INFO org.springframework.boot.StartupInfoLogger [main] Started IntsightsMigrationToolApplication in 1.466 seconds (JVM running for 1.892)
+2022-05-17 15:15:32,089 WARN com.rapid7.intsightsmigrationtool.services.CustomerService [AWT-EventQueue-0] Customer with the given name: ABC Ltd. has been previously migrated with this tool 
+2022-05-17 15:38:00,016 INFO org.springframework.boot.StartupInfoLogger [main] Starting IntsightsMigrationToolApplication using Java 17.0.2 on RMT-MBP-11247 with PID 63794 (/Users/dtobon/git/intsights-migration-tool/target/classes started by dtobon in /Users/dtobon/git/intsights-migration-tool)
+2022-05-17 15:38:00,020 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-05-17 15:38:01,511 INFO org.springframework.boot.StartupInfoLogger [main] Started IntsightsMigrationToolApplication in 1.667 seconds (JVM running for 2.126)
+2022-05-17 15:38:27,378 WARN com.rapid7.intsightsmigrationtool.services.CustomerService [AWT-EventQueue-0] Customer with the given name: ABC Ltd. has been previously migrated with this tool 
+2022-05-17 15:39:19,159 INFO org.springframework.boot.StartupInfoLogger [main] Starting IntsightsMigrationToolApplication using Java 17.0.2 on RMT-MBP-11247 with PID 63810 (/Users/dtobon/git/intsights-migration-tool/target/classes started by dtobon in /Users/dtobon/git/intsights-migration-tool)
+2022-05-17 15:39:19,161 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-05-17 15:39:20,278 INFO org.springframework.boot.StartupInfoLogger [main] Started IntsightsMigrationToolApplication in 1.284 seconds (JVM running for 1.808)
+2022-05-17 15:39:32,368 WARN com.rapid7.intsightsmigrationtool.services.CustomerService [AWT-EventQueue-0] Customer with the given name: ABC Ltd. has been previously migrated with this tool 
+2022-05-17 15:44:46,207 INFO org.springframework.boot.StartupInfoLogger [main] Starting IntsightsMigrationToolApplication using Java 17.0.2 on RMT-MBP-11247 with PID 63995 (/Users/dtobon/git/intsights-migration-tool/target/classes started by dtobon in /Users/dtobon/git/intsights-migration-tool)
+2022-05-17 15:44:46,209 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-05-17 15:44:47,408 INFO org.springframework.boot.StartupInfoLogger [main] Started IntsightsMigrationToolApplication in 1.372 seconds (JVM running for 1.844)
+2022-05-17 15:44:56,747 WARN com.rapid7.intsightsmigrationtool.services.CustomerService [AWT-EventQueue-0] Customer with the given name: ABC Ltd. has been previously migrated with this tool 
+2022-05-17 15:47:17,350 INFO org.springframework.boot.StartupInfoLogger [main] Starting IntsightsMigrationToolApplication using Java 17.0.2 on RMT-MBP-11247 with PID 64004 (/Users/dtobon/git/intsights-migration-tool/target/classes started by dtobon in /Users/dtobon/git/intsights-migration-tool)
+2022-05-17 15:47:17,352 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-05-17 15:47:18,605 INFO org.springframework.boot.StartupInfoLogger [main] Started IntsightsMigrationToolApplication in 1.425 seconds (JVM running for 1.871)
+2022-05-17 15:47:22,853 INFO org.springframework.boot.StartupInfoLogger [main] Starting IntsightsMigrationToolApplication using Java 17.0.2 on RMT-MBP-11247 with PID 64007 (/Users/dtobon/git/intsights-migration-tool/target/classes started by dtobon in /Users/dtobon/git/intsights-migration-tool)
+2022-05-17 15:47:22,856 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-05-17 15:47:23,903 INFO org.springframework.boot.StartupInfoLogger [main] Started IntsightsMigrationToolApplication in 1.204 seconds (JVM running for 1.55)
+2022-05-17 15:50:54,066 INFO org.springframework.boot.StartupInfoLogger [main] Starting IntsightsMigrationToolApplication using Java 17.0.2 on RMT-MBP-11247 with PID 64072 (/Users/dtobon/git/intsights-migration-tool/target/classes started by dtobon in /Users/dtobon/git/intsights-migration-tool)
+2022-05-17 15:50:54,070 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-05-17 15:50:55,135 INFO org.springframework.boot.StartupInfoLogger [main] Started IntsightsMigrationToolApplication in 1.225 seconds (JVM running for 1.754)
+2022-05-17 15:52:26,529 INFO org.springframework.boot.StartupInfoLogger [main] Starting IntsightsMigrationToolApplication using Java 17.0.2 on RMT-MBP-11247 with PID 64120 (/Users/dtobon/git/intsights-migration-tool/target/classes started by dtobon in /Users/dtobon/git/intsights-migration-tool)
+2022-05-17 15:52:26,531 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2022-05-17 15:52:27,769 INFO org.springframework.boot.StartupInfoLogger [main] Started IntsightsMigrationToolApplication in 1.419 seconds (JVM running for 1.949)
+2022-05-17 15:52:35,770 WARN com.rapid7.intsightsmigrationtool.services.CustomerService [AWT-EventQueue-0] Customer with the given name: xteam-test-1 Ltd. has been previously migrated with this tool 
+2022-05-17 15:56:06,951 WARN com.rapid7.intsightsmigrationtool.services.CustomerService [AWT-EventQueue-0] Customer with the given name: xteam-test-1 Ltd. has been previously migrated with this tool 
+2022-05-17 15:57:02,936 WARN com.rapid7.intsightsmigrationtool.services.CustomerService [AWT-EventQueue-0] Customer with the given name: xteam-test-1 Ltd. has been previously migrated with this tool 
+2022-05-17 15:58:54,953 WARN com.rapid7.intsightsmigrationtool.services.CustomerService [AWT-EventQueue-0] Customer with the given name: xteam-test-1 Ltd. has been previously migrated with this tool 
+2022-05-17 16:00:18,918 WARN com.rapid7.intsightsmigrationtool.services.CustomerService [AWT-EventQueue-0] Customer with the given name: ABC Ltd. has been previously migrated with this tool 
